@@ -1,7 +1,10 @@
 import axios from "axios";
+import dotenv from "dotenv";
 
 
-const BASE_URL = 'http://localhost:5000';
+dotenv.config();
+
+const BASE_URL = process.env.BASE_URL;
 
 
 function heartBeat(){

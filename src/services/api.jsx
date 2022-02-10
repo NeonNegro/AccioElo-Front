@@ -1,8 +1,8 @@
 import axios from "axios";
 
 
-const BASE_URL = process.env.PUBLIC_URL ? process.env.PUBLIC_URL : 'http://localhost:5000';
-console.log(` eeeee... ${process.env.PUBLIC_URL}`)
+const BASE_URL = process.env.REACT_APP_PUBLIC_URL ? process.env.REACT_APP_PUBLIC_URL : 'http://localhost:5000';
+console.log(` eeeee... ${process.env.REACT_APP_PUBLIC_URL}`)
 
 
 function heartBeat(){

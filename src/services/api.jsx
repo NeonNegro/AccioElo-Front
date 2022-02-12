@@ -13,9 +13,19 @@ function getProducts () {
     return axios.get(`${BASE_URL}/products`);
 }
 
+function getCategories () {
+    return axios.get(`${BASE_URL}/categories`);
+}
+
+function getProductsCategory (id) {
+    return axios.get(`${BASE_URL}/products/${id}`);
+}
+
 const api = {
     heartBeat,
     getProducts,
+    getCategories,
+    getProductsCategory,
 }
 
 export default api;

@@ -49,12 +49,7 @@ a {
 	text-decoration: none;
 }
 
-* {
-	box-sizing: border-box;
-}
-
 button, input{
 	all: unset;
 	box-sizing: border-box;
-	
 }

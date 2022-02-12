@@ -12,15 +12,26 @@ async function signUp(body){
     await axios.post(`${BASE_URL}/auth/sign-up`, body);
 }
 async function signIn(body){
-    debugger;
     await axios.post(`${BASE_URL}/auth/sign-in`, body);
 }
 
+function getProducts () {
+    return axios.get(`${BASE_URL}/products`);
+}
+function getCategories () {
+    return axios.get(`${BASE_URL}/categories`);
+}
+function getProductsCategory (id) {
+    return axios.get(`${BASE_URL}/products/${id}`);
+}
 
 const api = {
     heartBeat,
     signUp,
     signIn,
+    getProducts,
+    getCategories,
+    getProductsCategory,
 }
 
 export default api;

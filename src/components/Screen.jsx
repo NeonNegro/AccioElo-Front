@@ -13,9 +13,6 @@ const ScreenStyle = styled.div`
     `;
 
 function Screen({children}){
-
-    
-
     return <ScreenStyle>{children}</ScreenStyle>
 }
 

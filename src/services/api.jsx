@@ -9,9 +9,13 @@ function heartBeat(){
     return axios.get(`${BASE_URL}/health/heart-beat`);
 }
 
+function getProducts () {
+    return axios.get(`${BASE_URL}/products`);
+}
 
 const api = {
     heartBeat,
+    getProducts,
 }
 
 export default api;

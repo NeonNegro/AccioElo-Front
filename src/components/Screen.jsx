@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
-
-function Screen({children}){
-
-    const Screen = styled.div`
+const ScreenStyle = styled.div`
         width: 100vw;
         min-height: 100vh;
         background-color: #EEBA30;
         display: flex;
+        flex-direction: column;
     `;
 
-    return <Screen>{children}</Screen>
+function Screen({children}){
+
+    return <ScreenStyle>{children}</ScreenStyle>
 }
 
 

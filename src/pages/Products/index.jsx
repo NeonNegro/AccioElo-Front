@@ -1,6 +1,6 @@
 
 import Screen from "../../components/Screen.jsx";
-import { MenuHeader, TextCategory, ConteinerProducts, Navbar, RightNavbar} from "../../style/principalPage.js";
+import { MenuHeader, TextCategory, ConteinerProducts, Navbar, RightNavbar} from "../../style/principalPageStyle.js";
 import { AiOutlineMenu } from 'react-icons/ai';
 import { BsCart2 } from 'react-icons/bs';
 import { useContext, useEffect, useState } from "react";
@@ -48,7 +48,7 @@ function Products(){
         (
           <>
             <Navbar> 
-              <h1> Olá, Fulano</h1>
+              <h1> Olá, {auth.name}</h1>
               <h2> Categorias</h2>
               <p onClick = {() => {setCategoryId('1'); setNavbar(false)}}> 1. Todas as categorias </p>
                 {

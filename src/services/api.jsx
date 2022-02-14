@@ -25,6 +25,14 @@ function getProductsCategory (id) {
     return axios.get(`${BASE_URL}/products/${id}`);
 }
 
+function getCards (config) {
+    return axios.get(`${BASE_URL}/payment-card`, config);
+}
+
+function deleteCard(id, config) {
+    return axios.delete(`${BASE_URL}/payment-card/${id}`, config);
+}
+
 const api = {
     heartBeat,
     signUp,
@@ -32,6 +40,8 @@ const api = {
     getProducts,
     getCategories,
     getProductsCategory,
+    getCards,
+    deleteCard,
 }
 
 export default api;

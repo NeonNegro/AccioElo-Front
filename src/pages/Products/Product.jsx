@@ -1,4 +1,4 @@
-import { AddIcon, ProductConteiner, ProductImg, ProductDescription } from "../../style/principalPage";
+import { AddIcon, ProductConteiner, ProductImg, ProductDescription } from "../../style/principalPageStyle.js";
 import { BsFillPlusCircleFill } from 'react-icons/bs';
 
 function Product (product) {

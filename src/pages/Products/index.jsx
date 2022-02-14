@@ -48,8 +48,11 @@ function Products(){
         isNavbarOpen ? 
         (
           <>
-            <Navbar> 
-              <h1> Olá, {auth.name}</h1>
+            <Navbar>
+              { auth 
+              ? <h1> Olá, {auth.name}</h1>
+              : <h1> Olá!</h1>
+            } 
               <h2> Categorias</h2>
               <p onClick = {() => {setCategoryId('1'); setNavbar(false)}}> 1. Todas as categorias </p>
                 {

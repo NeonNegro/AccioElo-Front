@@ -76,7 +76,7 @@ function SignUp(){
                 />
                 <Button type="submit" > Cadastrar </Button>
             </Form>
-            <StyledLink to='/login'>Ainda é trouxa? Faça o cadastro e vire bruxo agora!</StyledLink>
+            <StyledLink to='/login'>Já é bruxo? Faça o login!</StyledLink>
         </Screen>
     )
 }

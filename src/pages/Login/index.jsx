@@ -55,8 +55,8 @@ function Login(){
                     required
                 />
                 <Button type="submit" > Entrar </Button>
-            </Form>
-            <StyledLink to='/sign-up'>Já é bruxo? Faça o login!</StyledLink>
+            </Form>            
+            <StyledLink to='/sign-up'>Ainda é trouxa? Faça o cadastro e vire bruxo agora!</StyledLink>
         </Screen>
     )
 }

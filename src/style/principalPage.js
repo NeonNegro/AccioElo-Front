@@ -92,11 +92,13 @@ const ConteinerProducts = styled.div `
 
 const ProductConteiner = styled.div `
     background-color: #740001;
+    box-sizing: content-box;
     width: 85vw;
     height: 22vh;
     margin-bottom: 2vh;
     border-radius: 6px;
     display: flex;
+    border: ${({isSelected}) => isSelected ? "6px solid #D0D4E9" : "none" };
 
 `;
 

@@ -25,6 +25,21 @@ function getProductsCategory (id) {
     return axios.get(`${BASE_URL}/products/${id}`);
 }
 
+function getCards (config) {
+    return axios.get(`${BASE_URL}/payment-card`, config);
+}
+
+function deleteCard(id, config) {
+    return axios.delete(`${BASE_URL}/payment-card/${id}`, config);
+}
+
+function addCard (body, config) {
+    return axios.post(`${BASE_URL}/payment-card`, body, config);
+}
+
+function checkoutCart(body, config) {
+    return axios.post(`${BASE_URL}/checkout`, body, config);
+}
 const api = {
     heartBeat,
     signUp,
@@ -32,6 +47,11 @@ const api = {
     getProducts,
     getCategories,
     getProductsCategory,
+    getCards,
+    deleteCard,
+    addCard,
+    checkoutCart,
+
 }
 
 export default api;

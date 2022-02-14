@@ -1,12 +1,21 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import CartContext from "../../contexts/CartContext";
 import { Container } from "./style";
 
-function BottomInfos(){
+function BottomInfos({ finishCart }){
 
-    const { shopCart } = useContext(CartContext);
+    const { shopCart, cartList } = useContext(CartContext);
     const navigate = useNavigate();
+    const location = useLocation();
+
+    function nextScreen() {
+        if (location.pathname === '/payment') {
+            finishCart();
+        } else {
+            navigate('/payment');
+        }
+    }
 
     return (
         <Container>
@@ -14,7 +23,7 @@ function BottomInfos(){
                 <span>TOTAL:</span> 
                 <span>{shopCart.total()}</span>
             </div>
-            <button onClick={() =>{navigate('/payment')}}> PROSSEGUIR </button>
+            <button onClick={nextScreen} disabled={!cartList.length}> PROSSEGUIR </button>
         </Container>
     )
 }

@@ -27,7 +27,6 @@ function Login(){
 
         api.signIn(body)
         .then((response) =>{
-            debugger;
             login({...response.data})
             navigate('/'); 
         })

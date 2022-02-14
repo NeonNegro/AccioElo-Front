@@ -24,7 +24,7 @@ function BottomInfos({ finishCart }){
         <Container>
             <div>
                 <span>TOTAL:</span> 
-                <span>{shopCart.total()}</span>
+                <span>ʛ {shopCart.total()}</span>
             </div>
             <button onClick={nextScreen} disabled={!cartList.length || !auth }> PROSSEGUIR </button>
         </Container>

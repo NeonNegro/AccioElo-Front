@@ -18,7 +18,7 @@ function CartUnit({product}){
                 <span>{product.qtd}</span>
                 <AiFillMinusCircle onClick={() => shopCart.minus(product._id)} color={'#D3A625'} size='22px'/>
                 </Qtd>
-                <Value> Valor: {product.qtd * product.price}</Value>
+                <Value> Valor: ʛ {product.qtd * product.price}</Value>
             </Info>
             <Trash><BsTrash onClick={()=> shopCart.remove(product._id)}  size='22px' /></Trash>
         </Container>

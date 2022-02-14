@@ -46,7 +46,7 @@ function Product ({product}) {
         <ProductDescription>
             <h1>{name}</h1>
             <p>{description}</p>
-            <h2>{Number(price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h2>
+            <h2> ʛ { price }</h2>
         </ProductDescription>        
       </ProductConteiner>
     );

@@ -3,10 +3,9 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import { BsFillPlusCircleFill } from 'react-icons/bs';
 import { AddNewCard, ConteinerCards, HeaderMenu } from "../../style/paymentStyles.js";
 import Card from "./Card.jsx";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import AuthContext from "../../contexts/AuthContext.jsx";
 import api from "../../services/api.jsx";
-import { useState } from "react/cjs/react.development";
 import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
 import BottomInfos from '../../components/BottomInfos'

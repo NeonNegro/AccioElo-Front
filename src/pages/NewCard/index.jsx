@@ -2,11 +2,10 @@ import { useNavigate } from "react-router";
 import Screen from "../../components/Screen.jsx";
 import { Form, Input, Button } from "../../components/FormComponents.jsx";
 import { AiOutlineArrowLeft } from 'react-icons/ai';
-import { useState } from "react/cjs/react.development";
 import { HeaderMenu } from '../../style/paymentStyles.js';
 import Swal from "sweetalert2";
 import api from "../../services/api.jsx";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import AuthContext from "../../contexts/AuthContext.jsx";
 
 function NewCard () {

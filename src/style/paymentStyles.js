@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 const HeaderMenu = styled.div `
-    margin: 2vh 0 0 -90vw;
+    margin: 2vh 0 2vh -90vw;
 `;
 
 const AddNewCard = styled.div `
     margin-left: -15vw;
     display: flex;
     align-items: center;
+    margin-top:2vh;
 
     h1 {
         margin-left: 10px;
@@ -17,7 +18,7 @@ const AddNewCard = styled.div `
 `;
 
 const ConteinerCards = styled.div `
-    margin-top: 3vh;
+    margin-top: 1vh;
 `;
 
 const CardStyle = styled.div `

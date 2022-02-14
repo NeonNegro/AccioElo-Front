@@ -7,6 +7,7 @@ import { useContext, useEffect } from "react";
 import AuthContext from "../../contexts/AuthContext.jsx";
 import api from "../../services/api.jsx";
 import { useState } from "react/cjs/react.development";
+import { useNavigate } from "react-router";
 
 
 function Payment(){
@@ -14,6 +15,7 @@ function Payment(){
     const [cards, setCards] = useState([]);
     const [selectedCard, setSelectedCard] = useState([]);
     const { auth } = useContext(AuthContext);
+    const navigate = useNavigate();
     
     useEffect(() => {
         const config = {
@@ -30,12 +32,13 @@ function Payment(){
     return (
         <Screen justify="flex-start">
           <HeaderMenu>
-            <AiOutlineArrowLeft color='#460001'  size='24px'/>
+            <AiOutlineArrowLeft color='#460001'  size='24px' onClick = {() => navigate('/shopping-cart')}/>
           </HeaderMenu>
-          <AddNewCard> 
+          <AddNewCard onClick = {() => navigate('/new-card')}> 
             <BsFillPlusCircleFill color='#460001'  size='32px'/>
             <h1>Adicionar um novo cartão</h1>
           </AddNewCard>
+          
           <ConteinerCards>
             {
                 cards.length === 0 ? 

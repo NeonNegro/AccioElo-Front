@@ -8,16 +8,17 @@ import api from "../../services/api.jsx";
 import Product from "./Product.jsx";
 import AuthContext from "../../contexts/AuthContext.jsx";
 import { StyledLink } from "../../components/FormComponents.jsx";
+import { useNavigate } from "react-router-dom";
 
 function Products(){
 
   const [products, setProducts] = useState([]);
   const [isNavbarOpen, setNavbar] = useState(false);
   const { auth } = useContext(AuthContext);
-  console.log(auth);
   const [categories, setCategories] = useState([]);
   const [categoryId, setCategoryId] = useState('');
   const [nameCategory, setNameCategory] = useState('Todos os produtos');
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (categoryId === '' || categoryId === '1') {
@@ -82,7 +83,7 @@ function Products(){
           <AiOutlineMenu size='29px' onClick={updateNavbar}/>
           <h1>ACCIOELO</h1>
         </div>
-        <BsCart2 size='29px' />
+        <BsCart2 onClick={()=> navigate('/shopping-cart')} size='29px' />
       </MenuHeader>
       {
         categoryId === '1' || categoryId === '' ?

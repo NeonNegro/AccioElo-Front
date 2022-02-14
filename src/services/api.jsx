@@ -36,6 +36,10 @@ function deleteCard(id, config) {
 function addCard (body, config) {
     return axios.post(`${BASE_URL}/payment-card`, body, config);
 }
+
+function checkoutCart(body, config) {
+    return axios.post(`${BASE_URL}/checkout`, body, config);
+}
 const api = {
     heartBeat,
     signUp,
@@ -46,6 +50,8 @@ const api = {
     getCards,
     deleteCard,
     addCard,
+    checkoutCart,
+
 }
 
 export default api;

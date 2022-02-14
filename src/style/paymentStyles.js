@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const HeaderMenu = styled.div `
-    margin: 2vh 0 2vh -90vw;
+    margin: 0 0 2vh -90vw;
 `;
 
 const AddNewCard = styled.div `

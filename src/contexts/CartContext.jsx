@@ -19,6 +19,10 @@ export function CartProvider({children}){
         persist([...newCart]);
     }
 
+    function clear() {
+        persist([]);
+    }
+
     function plus(id){
         const index = cartList.findIndex((c => c._id === id));
         cartList[index].qtd++;
@@ -57,6 +61,7 @@ export function CartProvider({children}){
         plus,
         minus,
         total,
+        clear,
     }
 
     return(

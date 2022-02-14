@@ -1,15 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, Form, Input, StyledLink } from "../../components/FormComponents";
 import { Logo } from "../../components/Logo";
 import Screen from "../../components/Screen";
+import AuthContext from "../../contexts/AuthContext";
 import api from "../../services/api";
+
 
 function Login(){
     const [pageForm, setPageForm] = useState({
         email:'' ,
         password:'',
     });
+    const { login } = useContext(AuthContext);
 
     const navigate = useNavigate();
 
@@ -20,12 +23,12 @@ function Login(){
     function handleSubmit(e){
         e.preventDefault();
 
-        debugger;
-
         const body = {...pageForm};
 
         api.signIn(body)
-        .then((resp) =>{ 
+        .then((response) =>{
+            debugger;
+            login({...response.data})
             navigate('/'); 
         })
         .catch((err)=> {console.log(err)});

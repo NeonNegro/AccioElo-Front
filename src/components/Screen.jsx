@@ -7,14 +7,14 @@ const ScreenStyle = styled.div`
         background-color: #EEBA30;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: ${({justify}) => justify ? justify : "center"};
         align-items: center;
         
     `;
 
-function Screen({children}){
-    return <ScreenStyle>{children}</ScreenStyle>
+function Screen({children, justify}){
+    return <ScreenStyle justify={justify}>{children}</ScreenStyle>
 }
 
 
-export default Screen;
+export default Screen

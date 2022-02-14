@@ -8,11 +8,11 @@ function heartBeat(){
     return axios.get(`${BASE_URL}/health/heart-beat`);
 }
 
-async function signUp(body){
-    await axios.post(`${BASE_URL}/auth/sign-up`, body);
+function signUp(body){
+    return axios.post(`${BASE_URL}/auth/sign-up`, body);
 }
-async function signIn(body){
-    await axios.post(`${BASE_URL}/auth/sign-in`, body);
+function signIn(body){
+    return axios.post(`${BASE_URL}/auth/sign-in`, body);
 }
 
 function getProducts () {

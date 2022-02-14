@@ -49,7 +49,7 @@ const Navbar = styled.div `
         margin: 10px 0 0 9px;
     }
 
-    h3 {
+    h3, a{
         position: fixed;
         width: 60vw;
         font-size: 14px;

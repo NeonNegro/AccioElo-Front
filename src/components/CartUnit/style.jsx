@@ -10,7 +10,16 @@ const Container = styled.div`
 const ImgContainer = styled.div`
     width: 80px;
     height: 80px;
-    background-color: black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 `;
 
 const Info = styled.div`

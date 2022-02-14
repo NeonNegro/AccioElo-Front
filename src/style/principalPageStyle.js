@@ -110,9 +110,11 @@ const ProductImg = styled.div `
   justify-content: center;
   border-radius: 6px;
   background-color: #ffffff40;
+
   img {
-    width: auto;
+    width: 100%;
     height: 100%;
+    object-fit: contain;
     border-radius: 6px;
   } 
 `;

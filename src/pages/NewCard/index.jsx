@@ -44,7 +44,7 @@ function NewCard () {
   return (
     <Screen justify='flex-start'>
       <HeaderMenu>
-        <AiOutlineArrowLeft color='#460001'  size='24px' onClick = {() => navigate('/payment-data')}/>
+        <AiOutlineArrowLeft color='#460001'  size='24px' onClick = {() => navigate('/payment')}/>
       </HeaderMenu>
 
       <Form onSubmit={registerCard}>

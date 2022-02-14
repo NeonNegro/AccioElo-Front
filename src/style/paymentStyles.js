@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const HeaderMenu = styled.div `
-    margin: 0 0 2vh -90vw;
+    align-self: self-start;
+    margin: 10px 0 2vh 10px;
 `;
 
 const AddNewCard = styled.div `

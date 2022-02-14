@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import AuthContext from "../../contexts/AuthContext";
 import CartContext from "../../contexts/CartContext";
 import { Container } from "./style";
 
 function BottomInfos({ finishCart }){
 
     const { shopCart, cartList } = useContext(CartContext);
+    const { auth } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -17,13 +19,14 @@ function BottomInfos({ finishCart }){
         }
     }
 
+
     return (
         <Container>
             <div>
                 <span>TOTAL:</span> 
                 <span>{shopCart.total()}</span>
             </div>
-            <button onClick={nextScreen} disabled={!cartList.length}> PROSSEGUIR </button>
+            <button onClick={nextScreen} disabled={!cartList.length || !auth }> PROSSEGUIR </button>
         </Container>
     )
 }

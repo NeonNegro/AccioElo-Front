@@ -8,6 +8,7 @@ import AuthContext from "../../contexts/AuthContext.jsx";
 import api from "../../services/api.jsx";
 import { useState } from "react/cjs/react.development";
 import { useNavigate } from "react-router";
+import Swal from "sweetalert2";
 
 
 function Payment(){
@@ -29,6 +30,19 @@ function Payment(){
 
     }, [auth.token]);
 
+    function finishCart () {
+      if (selectedCard.length === 0) {
+        Swal.fire({
+            html: `<h1 style = 'color: #fff'>Selecione algum cartão para prosseguir</h1>`,
+            width: '95%',
+            background: '#760001    ',
+            confirmButtonColor: '#EEBA30',
+            confirmButtonText: 'Excluir',
+        })
+      } else {
+          
+      }
+    }
     return (
         <Screen justify="flex-start">
           <HeaderMenu>
@@ -52,7 +66,7 @@ function Payment(){
             }
             
           </ConteinerCards>
-          <BottomPayment>
+          <BottomPayment onClick={finishCart}>
               <ButtonConfirm>FINALIZAR A COMPRA</ButtonConfirm>
           </BottomPayment>
         </Screen>

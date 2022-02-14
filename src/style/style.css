@@ -5,10 +5,19 @@
     box-sizing: border-box;
 }
 
-body {
+/* body {
     font-family: 'Raleway', sans-serif;
 }
 
 body *{
     font-family: 'Raleway', sans-serif;
+} */
+
+
+body{
+    font-family: 'Molengo', sans-serif;
+}
+
+body * {
+    font-family: 'Molengo', sans-serif;
 }

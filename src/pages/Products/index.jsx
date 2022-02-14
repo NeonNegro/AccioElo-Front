@@ -3,14 +3,18 @@ import Screen from "../../components/Screen.jsx";
 import { MenuHeader, TextCategory, ConteinerProducts, Navbar, RightNavbar} from "../../style/principalPage.js";
 import { AiOutlineMenu } from 'react-icons/ai';
 import { BsCart2 } from 'react-icons/bs';
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import api from "../../services/api.jsx";
-import Product from "./Product.js";
+import Product from "./Product.jsx";
+import AuthContext from "../../contexts/AuthContext.jsx";
+import { StyledLink } from "../../components/FormComponents.jsx";
 
 function Products(){
 
   const [products, setProducts] = useState([]);
   const [isNavbarOpen, setNavbar] = useState(false);
+  const { auth } = useContext(AuthContext);
+  console.log(auth);
   const [categories, setCategories] = useState([]);
   const [categoryId, setCategoryId] = useState('');
   const [nameCategory, setNameCategory] = useState('Todos os produtos');
@@ -38,7 +42,7 @@ function Products(){
   }
 
   return(
-    <Screen>
+    <Screen justify="flex-start">
       {
         isNavbarOpen ? 
         (
@@ -57,7 +61,11 @@ function Products(){
                     true
                   )
                 }
-              <h3> Cansou de fazer comprinhas? Clique aqui para sair da sua conta!</h3>
+              {(auth) 
+                ? <h3> Cansou de fazer comprinhas? Clique aqui para sair da sua conta!</h3> 
+                : <StyledLink to='/login'> Accio compras! Oh, espere: você não está logado. Logue agora!</StyledLink>
+              }
+              
             </Navbar>
             <RightNavbar onClick={updateNavbar}>
 

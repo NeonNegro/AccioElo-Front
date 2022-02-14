@@ -48,3 +48,8 @@ strong {
 a {
 	text-decoration: none;
 }
+
+button, input{
+	all: unset;
+	box-sizing: border-box;
+}
